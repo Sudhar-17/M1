@@ -1,0 +1,39 @@
+// Parent class
+class Transport {
+    void move() {
+        System.out.println("Transport can move.");
+    }
+}
+
+// Child class 1
+class Bus extends Transport {
+    void carryPassengers() {
+        System.out.println("Bus carries passengers.");
+    }
+}
+
+// Child class 2
+class Truck extends Transport {
+    void carryGoods() {
+        System.out.println("Truck carries goods.");
+    }
+}
+
+// Main class
+public class TransportDemo {
+    public static void main(String[] args) {
+
+        // Create Bus object
+        Bus b = new Bus();
+        System.out.println("Bus Object:");
+        b.move();             // inherited
+        b.carryPassengers();
+        System.out.println();
+
+        // Create Truck object
+        Truck t = new Truck();
+        System.out.println("Truck Object:");
+        t.move();             // inherited
+        t.carryGoods();
+    }
+}
