@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class VoteEligibility {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input age
+        System.out.print("Enter your age: ");
+        int age = sc.nextInt();
+
+        // Input citizenship status
+        System.out.print("Are you a citizen? (true/false): ");
+        boolean citizen = sc.nextBoolean();
+
+        // Check eligibility using logical AND
+        if (age >= 18 && citizen == true) {
+            System.out.println("You are eligible to vote.");
+        } else {
+            System.out.println("You are NOT eligible to vote.");
+        }
+
+        sc.close();
+    }
+}
