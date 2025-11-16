@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+class BitwiseOperation {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        System.out.println("\n--- Bitwise Operations ---");
+
+        // AND
+        System.out.println("AND (&) : " + (a & b));
+
+        // OR
+        System.out.println("OR (|) : " + (a | b));
+
+        // XOR
+        System.out.println("XOR (^) : " + (a ^ b));
+
+        // NOT
+        System.out.println("NOT (~a) : " + (~a));
+        System.out.println("NOT (~b) : " + (~b));
+
+        // Left Shift
+        System.out.println("Left Shift (a << 1) : " + (a << 1));
+        System.out.println("Left Shift (b << 1) : " + (b << 1));
+
+        // Right Shift
+        System.out.println("Right Shift (a >> 1) : " + (a >> 1));
+        System.out.println("Right Shift (b >> 1) : " + (b >> 1));
+
+        // Unsigned Right Shift (>>>)
+        System.out.println("Unsigned Right Shift (a >>> 1) : " + (a >>> 1));
+        System.out.println("Unsigned Right Shift (b >>> 1) : " + (b >>> 1));
+
+        sc.close();
+    }
+}
