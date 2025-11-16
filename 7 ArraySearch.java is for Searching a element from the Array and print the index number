@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class ArraySearch {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Array size
+        System.out.print("Enter the size of the array: ");
+        int size = sc.nextInt();
+
+        int[] arr = new int[size];
+
+        // Input elements
+        System.out.println("Enter " + size + " elements:");
+        for (int i = 0; i < size; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        // Element to search
+        System.out.print("Enter the element to search: ");
+        int target = sc.nextInt();
+
+        int index = -1;
+
+        // Linear search
+        for (int i = 0; i < size; i++) {
+            if (arr[i] == target) {
+                index = i;
+                break;
+            }
+        }
+
+        // Output result
+        if (index != -1) {
+            System.out.println("Element found at index: " + index);
+        } else {
+            System.out.println("Element not found in the array.");
+        }
+
+        sc.close();
+    }
+}
