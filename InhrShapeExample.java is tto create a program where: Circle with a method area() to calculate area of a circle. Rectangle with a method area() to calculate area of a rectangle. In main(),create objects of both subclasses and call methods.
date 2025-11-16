@@ -1,0 +1,53 @@
+// Parent class
+class Shape {
+    void displayShape() {
+        System.out.println("This is a Shape.");
+    }
+}
+
+// Circle class
+class Circle extends Shape {
+    double radius;
+
+    Circle(double r) {
+        radius = r;
+    }
+
+    void area() {
+        double area = 3.14159 * radius * radius;
+        System.out.println("Area of Circle: " + area);
+    }
+}
+
+// Rectangle class
+class Rectangle extends Shape {
+    double length, width;
+
+    Rectangle(double l, double w) {
+        length = l;
+        width = w;
+    }
+
+    void area() {
+        double area = length * width;
+        System.out.println("Area of Rectangle: " + area);
+    }
+}
+
+// Main class
+class InhrShapeExample {
+    public static void main(String[] args) {
+
+        // Create Circle object
+        Circle c = new Circle(5.5);
+        c.displayShape();
+        c.area();
+
+        System.out.println();
+
+        // Create Rectangle object
+        Rectangle r = new Rectangle(10, 6);
+        r.displayShape();
+        r.area();
+    }
+}
