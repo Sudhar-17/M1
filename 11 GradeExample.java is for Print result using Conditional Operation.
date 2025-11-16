@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+class GradeExample {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter marks (0–100): ");
+        int marks = sc.nextInt();
+
+        // Using nested ternary operator
+        String grade = (marks >= 90) ? "A"
+                     : (marks >= 75) ? "B"
+                     : (marks >= 60) ? "C"
+                     : (marks >= 40) ? "D"
+                     : "Fail";
+
+        System.out.println("Grade: " + grade);
+
+        sc.close();
+    }
+}
