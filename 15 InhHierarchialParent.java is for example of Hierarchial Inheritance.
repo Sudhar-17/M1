@@ -1,0 +1,38 @@
+// Parent class
+class InhHierarchialParent {
+    void showParent() {
+        System.out.println("This is the Parent Class.");
+    }
+}
+
+// Child 1 class
+class ChildA extends InhHierarchialParent {
+    void showA() {
+        System.out.println("This is Child A Class.");
+    }
+}
+
+// Child 2 class
+class ChildB extends InhHierarchialParent {
+    void showB() {
+        System.out.println("This is Child B Class.");
+    }
+}
+
+// Main class to demonstrate Hierarchical Inheritance
+class Main {
+    public static void main(String[] args) {
+
+        // Object of ChildA
+        ChildA a = new ChildA();
+        System.out.println("----- Child A Object -----");
+        a.showParent();
+        a.showA();
+
+        // Object of ChildB
+        ChildB b = new ChildB();
+        System.out.println("----- Child B Object -----");
+        b.showParent();
+        b.showB();
+    }
+}
