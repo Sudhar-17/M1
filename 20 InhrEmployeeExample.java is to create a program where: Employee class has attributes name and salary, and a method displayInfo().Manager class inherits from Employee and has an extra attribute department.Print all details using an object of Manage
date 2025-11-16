@@ -1,0 +1,37 @@
+// Parent class
+class Employee {
+    String name;
+    double salary;
+
+    void displayInfo() {
+        System.out.println("Employee Name: " + name);
+        System.out.println("Salary: ₹" + salary);
+    }
+}
+
+// Child class
+class Manager extends Employee {
+    String department;
+
+    void displayDepartment() {
+        System.out.println("Department: " + department);
+    }
+}
+
+// Main class
+class InhrEmployeeExample {
+    public static void main(String[] args) {
+
+        // Creating Manager object
+        Manager mgr = new Manager();
+
+        // Assigning values
+        mgr.name = "Rahul";
+        mgr.salary = 55000;
+        mgr.department = "Human Resources";
+
+        // Display details
+        mgr.displayInfo();
+        mgr.displayDepartment();
+    }
+}
