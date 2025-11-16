@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+class M2IfNested {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        if (num >= 0) {  // First if
+            System.out.println("The number is Non-Negative.");
+
+            if (num % 2 == 0) {  // Nested if
+                System.out.println("It is also Even.");
+            } else {
+                System.out.println("It is also Odd.");
+            }
+
+        } else {
+            System.out.println("The number is Negative.");
+        }
+
+        sc.close();
+    }
+}
