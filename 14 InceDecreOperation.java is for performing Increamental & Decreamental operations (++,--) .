@@ -1,0 +1,22 @@
+class InceDecreOperation {
+    public static void main(String[] args) {
+
+        int num = 10;
+
+        System.out.println("Initial value: " + num);
+
+        // Increment operations
+        num++;
+        System.out.println("After num++ : " + num);
+
+        ++num;
+        System.out.println("After ++num : " + num);
+
+        // Decrement operations
+        num--;
+        System.out.println("After num-- : " + num);
+
+        --num;
+        System.out.println("After --num : " + num);
+    }
+}
