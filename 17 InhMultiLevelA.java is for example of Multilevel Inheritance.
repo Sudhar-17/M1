@@ -1,0 +1,48 @@
+// Interface 1
+interface A {
+    void showA();
+}
+
+// Interface 2
+interface B {
+    void showB();
+}
+
+// Class C implements A
+class C implements A {
+    public void showA() {
+        System.out.println("Inside Class C (implements A)");
+    }
+}
+
+// Class D implements B
+class D implements B {
+    public void showB() {
+        System.out.println("Inside Class D (implements B)");
+    }
+}
+
+// Class E extends C and implements B (Hybrid Inheritance)
+class E extends C implements B {
+    public void showB() {
+        System.out.println("Inside Class E (implements B)");
+    }
+
+    void showE() {
+        System.out.println("Inside Class E (child class)");
+    }
+}
+
+// Main Class
+class InhHybrid {
+    public static void main(String[] args) {
+
+        E obj = new E();
+
+        System.out.println("----- Hybrid Inheritance Example -----");
+
+        obj.showA();  // From Class C → Interface A
+        obj.showB();  // From B interface
+        obj.showE();  // Class E own method
+    }
+}
