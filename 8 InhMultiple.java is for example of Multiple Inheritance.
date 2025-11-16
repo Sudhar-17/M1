@@ -1,0 +1,39 @@
+// Interface 1
+interface A {
+    void showA();
+}
+
+// Interface 2
+interface B {
+    void showB();
+}
+
+// Class C implements both A and B → Multiple Inheritance
+class C implements A, B {
+
+    public void showA() {
+        System.out.println("Inside Interface A method (implemented in Class C)");
+    }
+
+    public void showB() {
+        System.out.println("Inside Interface B method (implemented in Class C)");
+    }
+
+    void showC() {
+        System.out.println("Inside Class C (own method)");
+    }
+}
+
+// Main class
+class InhMultiple {
+    public static void main(String[] args) {
+
+        C obj = new C();
+
+        System.out.println("----- Multiple Inheritance Example -----");
+
+        obj.showA();  // From Interface A
+        obj.showB();  // From Interface B
+        obj.showC();  // Class C own method
+    }
+}
