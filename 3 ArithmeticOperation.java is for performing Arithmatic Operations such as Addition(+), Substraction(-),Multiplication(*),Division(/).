@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class ArithmeticOperation {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input two numbers
+        System.out.print("Enter first number: ");
+        double num1 = sc.nextDouble();
+
+        System.out.print("Enter second number: ");
+        double num2 = sc.nextDouble();
+
+        // Perform operations
+        double sum = num1 + num2;
+        double diff = num1 - num2;
+        double prod = num1 * num2;
+        double div = num1 / num2; // Division
+
+        // Display results
+        System.out.println("\n--- Arithmetic Operations ---");
+        System.out.println("Addition = " + sum);
+        System.out.println("Subtraction = " + diff);
+        System.out.println("Multiplication = " + prod);
+        System.out.println("Division = " + div);
+
+        sc.close();
+    }
+}
