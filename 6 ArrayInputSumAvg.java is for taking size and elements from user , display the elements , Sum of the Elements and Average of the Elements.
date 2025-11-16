@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class ArrayInputSumAvg {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Take size
+        System.out.print("Enter the size of the array: ");
+        int size = sc.nextInt();
+
+        int[] arr = new int[size];
+
+        // Take elements
+        System.out.println("Enter " + size + " elements:");
+        for (int i = 0; i < size; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        // Display elements
+        System.out.println("\nArray Elements:");
+        for (int i = 0; i < size; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+        // Calculate sum
+        int sum = 0;
+        for (int i = 0; i < size; i++) {
+            sum += arr[i];
+        }
+
+        // Calculate average
+        double average = (double) sum / size;
+
+        // Print results
+        System.out.println("\n\nSum of Elements = " + sum);
+        System.out.println("Average of Elements = " + average);
+
+        sc.close();
+    }
+}
